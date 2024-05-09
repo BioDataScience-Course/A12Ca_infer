@@ -47,3 +47,12 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# html and pdf
+challenge_infer_files/
+*.html
+*.pdf
+*.nb.html
+
+# OS-specific files
+.DS_Store

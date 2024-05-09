@@ -1,0 +1,161 @@
+---
+title: "Challenge : tests d'hypothèses"
+author: "___"
+date: "`r Sys.Date()`"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
+editor: visual
+lang: fr
+---
+
+```{r setup, include=FALSE}
+SciViews::R("infer", "model", lang = "fr")
+if (!"tools:score" %in% search())
+  source("R/functions.R", attach(NULL, name = "tools:score"))
+unlink(dir("challenge_infer_files/figure-html", pattern = "\\.png$"))
+
+# Lecture des données
+anorexia <- read("anorexia", package = "MASS")
+pima <- read("Pima.te", package = "MASS" )
+```
+
+Vous avez à disposition le jeu de données `anorexia` qui étudie la variation pondérale de patientes anorexiques avant et après différents traitements, voir `?anorexia`.
+
+## Item 1
+
+Reproduisez l'analyse ci-dessous à partir du jeu de données `anorexia` en formatant le résultat à l'aide de `tabularise()`.
+
+![](figures/infer01-1.png)
+
+```{r infer01, record_table=TRUE}
+___ |>
+  tabularise()
+```
+
+Votre score est de **`r score_infer(1)`**.
+
+
+## Item 2
+
+Reproduisez le graphique ci-dessous relatif à `anorexia` (une variable doit être calculée). Ce graphique décrit les données en vue d'une analyse ensuite à l'aide d'un test d'hypothèse.
+
+![](figures/infer02-1.png)
+
+```{r infer02}
+
+```
+
+Votre score est de **`r score_infer(2)`**.
+
+
+## Item 3
+
+Reproduisez l'analyse ci-dessous à partir du jeu de données `anorexia` (la même transformation de données que pour l'item 3 est nécessaire ici).
+
+![](figures/infer03-1.png)
+
+```{r infer03, record_table=TRUE}
+
+```
+
+Votre score est de **`r score_infer(3)`**.
+
+
+## Item 4
+
+Sur base de l'analyse réalisée à l'item 4, tracez le graphique de la distribution théorique considérée sous H~0~ comme ci-dessous.
+
+![](figures/infer04-1.png)
+
+```{r infer04}
+
+```
+
+Votre score est de **`r score_infer(4)`**.
+
+
+## Item 5
+
+Toujours à partir du jeu de données `anorexia`, reproduisez l'analyse suivante que vous formatez avec `tabularise()`.
+
+![](figures/infer05-1.png)
+
+```{r infer05, record_table=TRUE}
+
+```
+
+Votre score est de **`r score_infer(5)`**.
+
+Vous avez également le jeu de données `pima` qui étudie des données médicales de femmes amérindiennes de la tribu Pima particulièrement susceptibles de déveloper un diabète. Voyez `?Pima.te` pour plus d'informations.
+
+## Item 6
+
+Produisez et formatez le tableau suivant avec `tabularise()`, en partant du jeu de données `pima`.
+
+![](figures/infer06-1.png)
+
+```{r infer06, record_table=TRUE}
+
+```
+
+Votre score est de **`r score_infer(6)`**.
+
+
+## Item 7
+
+À partir de `pima`, réalisez l'analyse suivante qui étudie le diabète et l'indice de masse corporelle chez ces amérindiennes. Formatez le résultat avec `tabularise()`.
+
+![](figures/infer07-1.png)
+
+```{r infer07, record_table=TRUE}
+
+```
+
+Votre score est de **`r score_infer(7)`**.
+
+
+## Item 8
+
+À partir du jeu de données `pima` dont vous ne retenez que les femmes ayant eu entre 0 et 3 grossesses, reproduisez le graphique descriptif suivant (la transparence antant que les largeurs sont de 10%). Vous initialiserez le générateur pseudo-aléatoire à 364 avant vos calculs.
+
+![](figures/infer08-1.png)
+
+```{r infer08}
+
+```
+
+Votre score est de **`r score_infer(8)`**.
+
+
+## Item 9
+
+Reproduisez l'analyse suivante qui traite des mêmes données que celles représentées à l'item 8. Formatez le résultat avec `tabularise()`.
+
+![](figures/infer09-1.png)
+
+```{r infer09, record_table=TRUE}
+
+```
+
+Votre score est de **`r score_infer(9)`**.
+
+
+## Item 10
+
+Recréez le tableau suivant issu d'une analyse de *toutes* les données de `pima`, mais avec les mêmes variables que celles utilisées aux items 8 et 9. Formatez le résultat avec `tabularise()`.
+
+![](figures/infer10-1.png)
+
+```{r infer10, record_table=TRUE}
+
+```
+
+Votre score est de **`r score_infer(10)`**.
+
+
+# Score final
+
+Votre score total est de **`r res <- score_all_infer(); round(sum(res), 1)`/10**. Si vous soumettez votre réponse (exportez le fichier results/`r  attr(res, "file")` et soumettez-le dans l'app Shiny du challenge), faites un commit avec comme message le numéro **`r attr(res, "id")`**.

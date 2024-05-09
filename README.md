@@ -1,2 +1,7 @@
-# A12Ca_infer
-Challenge for inference tests (SDD II Q2)
+# Challenge tests d'hypothèses
+
+Défi à relever **individuellement** : vous disposez de deux ensembles de données et de dix analyses de type ytest d'hypothèse à reproduire exactement en 60 minutes. Si la correspondance est parfaite, vous obtenez un score de 1, si elle est partielle, le score diminue. Pour toute analyse non réalisée, le score est de zéro. Le score maximum est donc de 10/10.
+
+Après avoir effectué vos analyses, vous devez compiler le rapport `challenge_infer.qmd` en utilisant le **bouton Rendu** pour que votre score soit calculé (veillez à respecter le **nom du chunk** qui doit être `inferXX` où `XX` est le numéro du graphique ou du tableau correspondant). Un fichier est alors généré dans le dossier `results` (à chaque compilation, un nombre est incrémenté). Vous devez soumettre le dernier fichier de `results` dans l'application du défi à l'adresse <https://sdd.umons.ac.be/A10Ca_infer> pour entrer dans le classement. À ce moment-là, votre position dans le classement global est recalculée. *Il n'est pas nécessaire de générer toutes les analyses, ni de les générer dans l'ordre pour soumettre une réponse.* Une seule analyse suffit pour faire une soumission.
+
+**Votre objectif est de grimper le plus haut possible dans le classement dans le temps imparti.** Notez que vous pouvez soumettre autant de résultats que vous le souhaitez. Vous n'avez pas besoin d'avoir tout terminé pour vous classer, et *il est même préférable de soumettre régulièrement votre progression pour voir où vous vous situez*. Chaque fois que vous soumettez une réponse, vous devez également **effectuer un commit** où vous indiquez dans le message du commit le numéro qui se trouve à la fin du dernier fichier du dossier `results`.
